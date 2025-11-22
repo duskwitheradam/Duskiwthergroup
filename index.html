@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: url('https://cdn.discordapp.com/attachments/1398807430636507208/1437172296136785940/iEZeoQAnJ1MTHSFG.gif?ex=691f7580&is=691e2400&hm=c7eb2e9cfdcd6adcad7ecde21b493f22d3ef44141946983374ecebd2acef5d37&') no-repeat center center fixed;
+            background: url('https://cdn.discordapp.com/attachments/1398807430636507208/1437172296136785940/iEZeoQAnJ1MTHSFG.gif?ex=6922c140&is=69216fc0&hm=96f9fa4543e36d158377a005d9002f4fcac4ac854d26fb1d04bcbcd7969c9d58&') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Courier New', Courier, monospace;
             color: #000000;
@@ -20,39 +19,50 @@
             flex-direction: column;
             text-align: center;
         }
-        .image-container img {
-            width: 750px; 
-            height: auto;
-            border: 2px solid #000000; 
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(92, 91, 91, 0.7); 
+
+        .corner-img {
+            position: absolute;
+            width: 180px; /* الحجم الجديد */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
         }
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 10px; right: 10px; }
+        .bottom-left { bottom: 10px; left: 10px; }
+        .bottom-right { bottom: 10px; right: 10px; }
+
         .info {
             margin-top: 20px;
             font-size: 1.5em;
-            color: #000000ff; 
-            text-shadow: 0px 0px 8px #000000ff, 0px 0px 15prgba(0, 0, 0, 1)48, 0px 0px 25px #000000ff; 
-            letter-spacing: 4.5px; 
+            color: #000;
+            text-shadow: 0px 0px 8px #000;
+            letter-spacing: 4.5px;
             white-space: pre-wrap;
         }
+
         .text {
             margin-top: 20px;
-            font-size: 3em; 
-            color: #030303ff; 
-            text-shadow: 0px 0px 8px #000000ff, 0px 0px 15px #000000ff, 0px 0px 25px #000000ff; 
-            letter-spacing: 4.5px; 
+            font-size: 3em;
+            color: #030303;
+            text-shadow: 0px 0px 8px #000, 0px 0px 15px #000, 0px 0px 25px #000;
+            letter-spacing: 4.5px;
         }
     </style>
 </head>
 <body>
-    <div class="image-container">
-        
-     </div>
+
+    <!-- الصور في الزوايا -->
+    <img src="https://files.catbox.moe/rpkc7j.jpg" class="corner-img top-left">
+    <img src="https://files.catbox.moe/rpkc7j.jpg" class="corner-img top-right">
+    <img src="https://files.catbox.moe/rpkc7j.jpg" class="corner-img bottom-left">
+    <img src="https://files.catbox.moe/rpkc7j.jpg" class="corner-img bottom-right">
+
     <audio autoplay loop>
-        <source src="https://files.catbox.moe/mg8mqy.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <source src="https://files.catbox.moe/q0t0of.m4a" type="audio/mpeg">
     </audio>
-<div class="text">Security alert Duśkwither on the System</div>
+
+    <div class="text">Fucked By Duśkwitherتحسب اذا بندتني مااقدر ارجع يحمار؟ برا يامخنث انت وياه وكسم اي واحد قذف فيكم و خشو الدس يامخانيث</div>
+
     <div class="info" id="ip-info">
         <strong>IP: <span id="ip"></span></strong><br>
         <span><strong>City:</strong> <span id="city"></span></span><br>
@@ -62,10 +72,11 @@
         <span><strong>Organization:</strong> <span id="org"></span></span><br>
         <span><strong>Timezone:</strong> <span id="timezone"></span></span>
     </div>
+
     <div class="text">discord.gg/VVMWhGeRvM</div>
 
     <script>
-         fetch('https://ipinfo.io/json')
+        fetch('https://ipinfo.io/json')
         .then(response => response.json())
         .then(data => {
             delete data.readme;
@@ -73,9 +84,6 @@
             infoDiv.textContent = JSON.stringify(data, null, 2);
         });
     </script>
+
 </body>
 </html>
-open your imagination with us .. to another world.
-our strength is our ability to touch the imagination.
-and also the strongest is the one who owns himself with his power.
-welcome to the fantasy world "Duśkwither". 
